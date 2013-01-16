@@ -1,0 +1,704 @@
+/*
+Theme Name: Boletim PSI WordPress
+Theme URI: http://wordpress.org/
+Description: Tema do boletim PSI BIREME versao WordPress.
+Author: BIREME - DGI
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: blogs, authors, bireme
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #3B364A;
+	background: #CDCDCD;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+.spacer {
+	clear: both;
+	height: 1px;
+}
+.postPSI a {
+	color: #34425D;
+}
+.postPSI a:hover {
+	text-decoration: none;
+}
+
+h3, h3 a {
+	color:#387983;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	margin-top:0;
+	font-weight: bold;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+h2 {
+	color:#234463;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14pt;
+	text-decoration: none;
+	margin: 0px 0px 15px 0px;
+	line-height: 25px;
+}
+.container {
+	width: 1004px;
+	background: #FFF;
+	min-height: 600px;
+	margin: 0 auto;
+	background: url(images/body_background.gif) top left repeat-y;
+}
+
+.header img {
+	display: block;
+}
+.date {
+	background: #397983;
+	color:#FFFFFF;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:8pt;
+	font-weight:bold;
+	height:16px;
+	padding-right:5px;
+	text-decoration: none;
+	text-align: right;
+	padding-top: 3px;
+}
+
+.coluna1 {
+	width: 16.8%;
+	float: left;
+	min-height: 100px;
+}
+
+.coluna1 .menu li {
+	border-bottom: 1px solid #78A7B9;
+	color:#78A7B9 !important;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 4px 8px 4px;
+	text-align: left;
+	line-height: 15px;
+}
+.coluna1 .menu li a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.coluna1 .menu li.menu-item-object-category a {
+	font-weight: normal;
+}
+.current-menu-item {
+	background: #86C1D5;
+}
+.middle {
+	width: 65.25%;
+	float: left;	
+	margin-bottom: 30px;
+	margin: 1%;
+}
+.canal, .canal a {
+	color:#676767;
+	font-size:5pt;
+	font-weight:bold;
+	text-decoration:none;
+}
+.archive.tax-canal .canal {
+	display: none;
+}
+.coluna2 {
+	width: 15.8%;
+	float: right;
+	min-height: 100px;
+}
+.coluna2 {
+	
+}
+.coluna2 .widget_text span.title_widget {
+	display: none;
+}
+
+.coluna2 li {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding:5px 10px 5px 5px;
+	text-align:right;
+	list-style: none;
+}
+.coluna2 li a.description {
+	font-size: 10pt;
+}
+.coluna2 li a {
+	color: #34425D;
+	text-decoration: none;
+}
+.coluna2 .iahx_search{
+	background: #C6D49D;
+	padding: 0px 5px 10px 5px;
+}
+.coluna2 .iahx_search .title_widget {
+	color:#000000;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+.coluna2 .iahx_search input#s {
+	border:1px solid #999999;
+	color:#000000;
+	font-size:8pt;
+	text-decoration:none;
+	width: 145px;
+	}
+.coluna2 .iahx_search input#submit {
+	background-color:#FFFFFF;
+	border:1px solid #999999;
+	color:#000000;
+	font-size:8pt;
+	font-weight:bold;
+	text-decoration:none;
+}
+.odd {
+	background: #EAF4CF;
+}
+
+.post_Area {
+	font-size: 10pt;
+	width: 78%;
+	float: left;
+	margin-top: 15px;
+}
+.post_Area .post {
+	display: block;
+	clear: both;
+	margin-bottom: 10px;
+}
+.post_Area .post .post_content .thumb {
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.post_content ul {
+	margin: 0px 0px 10px 10px;
+	list-style: disc;
+}
+.post_content ul li {
+	margin: 5px 0px 5px 10px;
+}
+.post_content ul ul {
+	list-style: square;
+	margin: 0px;        
+	margin-left: 25px;      
+}
+.post_content ul ul li {
+    margin: 0px 10px 3px 20px;
+}
+.category_name  {
+	clear: both;
+}
+.archive.category .category_name{
+	display: none;	
+}
+.category_name a {
+	color:#860600;
+	text-decoration:none;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:8pt;
+	font-weight:bold;
+}
+.authorLine {
+	color: #3B364A;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:8pt;
+	margin-top: 2px;
+	display: none;
+}
+.authorLine a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #387983;
+}
+.authorLine a:hover {
+	border-bottom: 1px dotted #387983;
+}
+
+.post_Area .post h3 {
+	font-size: 14pt;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: normal;
+	margin: 0px;
+	margin-top: 3px;
+}
+
+.post_Area .post h3 a {
+	color:#234463;
+	text-decoration:none;
+}
+.post_Area .post .call {
+	margin-top: 10px;
+	line-height: 16px;
+}
+
+.destaques_secundarios {
+	float: right;
+	width: 19.5%;
+}
+.feature_2level {
+	border-bottom: 1px solid #E2E2E2;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+.call_title a {
+	color: #234463;
+	font-size: 10pt;
+	text-decoration: none;
+}
+
+.single h3 {
+}
+
+.singlePost {
+	margin: 10px 0px;
+	color:#3B364A;
+	font-family:verdana;
+	font-size:10pt;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 15pt;
+}
+
+.singlePost p {
+	margin: 0px 0px 10px 0px;
+}
+
+.tags {
+	font-size: 9px;
+	padding-left: 20px;
+	background: url(images/tagIcon.gif) top left no-repeat;
+}
+
+.byLine {
+	color:#3B364A;
+	font-family:verdana;
+	font-size:10px;
+	text-align: right;
+	margin-top: 10px;
+}
+.back {
+	text-align: right;
+}
+.back a {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	margin-top: 15px;
+	text-decoration: none;
+}
+body.author .post_Area {
+	width: 90%;
+	margin: 2.5%;
+}
+
+.authorBox {
+	margin: 10px;
+	border-bottom: 2px solid #397983;
+}
+
+.authorAvatar {
+	margin: 0px;
+	float: left;
+}
+
+.authorDescription {
+	color: #387983;
+	float: left;
+	margin: 00px 0px 0px 10px;
+	font-size: 10pt;
+	line-height: 15px;
+	width: 560px;
+}
+
+.authorName {
+	clear: both;
+	font-size: 13pt;
+	font-weight: bold;
+}
+.authorName {
+	
+}
+
+/* WP Images in post */
+	.alignleft {
+		float: left;
+		margin: 0px 10px 10px 0px;
+	}
+	.alignright {
+		float: right;
+		margin: 0px 10px 0px 10px;
+	}
+	
+	.aligncenter {
+		margin: 0 auto;
+	}
+	
+	.wp-caption-text {
+		font-size: 7.5pt;
+		font-weight: bold;
+		margin: 3px;
+		text-align: center;
+	}
+
+/* WP Gallery  */
+	#colorbox {
+		font-size: 10px; /*Redefine o tamanho da fonte no lightbox*/
+	}
+	.gallery {
+		line-height: 10px;	
+		width: 220px;
+		float: right;
+		margin: 0px 10px !important;
+	}
+ 	.gallery a img {
+ 		border: none !important;	
+ 	}
+	.gallery .gallery-item {
+		clear: both;
+	}
+	.gallery .gallery-caption	{
+		font-size: 7.5pt;
+		font-weight: bold;
+		margin: 3px;
+	}
+	
+/* LIST AUTHORS PAGE */
+	.post_Area.authorsList {
+		width: 100%;
+	}
+	
+	.author_List {
+		border-bottom: 2px solid #387983;
+		margin-bottom: 10px;
+	}
+	
+	.author_List img.photo {
+		float: left;
+	}
+	.author_List .authorInfo {
+		width: 585px;
+		float: left;
+		margin-left: 5px;
+	}
+	.author_List .authorName {
+		line-height: 25px;
+		float: left;
+	}
+	.author_List .rss {
+		float: left;
+	}
+	.author_List .rss a {
+		background: url(images/rss16.png) top left no-repeat;
+		width: 16px;
+		height: 16px;
+		display: block;
+		margin: 4px;
+	}
+	.author_List .rss a span {
+		display: none;
+	}
+	.author_List .userDescription {
+		display: block;
+		margin-bottom: 5px;
+		font-weight: bold;
+		clear: both;
+	}
+	.author_List .authorName a {
+		color: #387983;
+	}
+	
+	.numPosts {
+		color: #387983;
+	}
+	
+/* ColorBox Redefinitions */
+	#cboxContent, #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight {
+		background: #E6E5E5 !important;
+	}
+	#cboxTopLeft, #cboxTopCenter, #cboxTopRight {
+		height: 5px !important;
+	}
+	#cboxTopLeft, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight, #cboxBottomLeft, #cboxBottomRight {
+		width: 5px !important;
+	}
+	
+	.footer {
+		background:none repeat scroll 0 0 #F1F1F1;
+		clear:both;
+		padding:12px;
+		margin: 0 auto;
+	}
+	.institutionList li {
+		color:#2F3537;
+		float:left;
+		font-family:verdana;
+		font-size:10px;
+		margin-right:12px;
+		line-height: 13px;
+	}
+	.footer .institutionList a#bireme {
+		background:url("images/logo_Bireme.gif") no-repeat scroll 0 0 transparent;
+		display:block;
+		height:70px;
+		width:180px;
+	}
+	.footer .institutionList a span {
+		display: none;
+	}
+	.addthis_toolbox {
+		margin-top: 5px;
+	}
+.h4, h4 a {
+	color: #234463;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.blogsArea {
+	border: 1px solid #DFDFDF;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	
+}
+.blogsArea h2 {
+	margin: 10px 0px 0px 10px;
+}
+.blogsArea .post_title {
+	margin: 10px 10px 3px 20px;
+}
+.blogsArea .authorLine {
+	margin: 0px 10px 10px 20px;
+}
+
+.comments h3#comments {
+	font-size: 14px;
+}
+
+.commentlist li {
+	font-size: 12px;
+	margin: 10px 0px 10px 20px;
+	background: none;
+	padding: 5px;
+	background-color: #F1F1F1;
+}
+.commentlist li.odd {
+	background-color:  #EAF4CF;
+}
+.comment-author.vcard, .comment-author.vcard a {
+	font-weight: bold;
+}
+.commentmetadata a {
+	color: #3B364A;
+	text-decoration: none;
+}
+.comment-body p {
+	margin: 10px;
+}
+
+.comment .reply {
+	text-align: right;
+}
+.comment .reply a {
+	color: #387983;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#respond form p {
+	margin: 5px;
+}
+#respond small {
+	font-size: 10px;
+}
+#respond input#submit{
+	border: 1 px solid 2F3537;
+	color: #FFF;
+	background-color: #387983;
+	padding: 3px;
+	font-size: 80%;
+}
+
+.bar {
+	position: absolute;
+	width: 984px;
+	text-align: right;
+	margin: 8px 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.bar span a {
+	padding: 0px 2px 2px 20px;
+	margin-left: 10px;
+	color: #397983;
+}
+
+.userConected a {
+	background: url(images/user.gif) top left no-repeat;
+	margin: 0px;
+}
+.controlPanel a {
+	background: url(images/controlPanel.gif) top left no-repeat;
+}
+.help a {
+	background: url(images/help.gif) top left no-repeat;
+}
+.logout a {
+	background: url(images/logout.gif) top left no-repeat;
+}
+.login a {
+	background: url(images/login.gif) top left no-repeat;
+}
+
+#loginArea {
+	background: url("images/transparencia.png");
+	position: absolute;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#loginArea .area980 {
+	position: absolute;
+	width: 980px;
+	margin: 0 auto;
+	left: 50%;
+	margin-left: -490px;
+}
+
+#loginArea div.Box {
+	width: 350px;
+	height: 165px;
+	background: #637dc9;
+	padding: 10px 20px 20px 20px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #FFF;
+	float: right;
+	margin-top: 20px;
+}
+
+#loginArea #loginbox_title {
+	display: none;
+}
+
+#loginArea form {
+	clear: both;
+}
+#loginArea p {
+	font-size: 12px;
+}
+
+#loginArea input#user_login, #loginArea input#user_pass {
+	border: 1px solid #626262;
+	width: 100%;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+#loginArea .loginbox_button {
+	border: 2px solid #8a9fdc;
+	border-bottom-color: #4e67b0;
+	border-right-color: #4e67b0;
+	color: #FFF;
+	font-weight: bold;
+	background: #637dc9;
+	padding: 5px;
+	float: right;
+}
+
+.closeButton {
+	font-size: 12px;
+	float: right;
+}
+
+.closeButton a {
+	color: #fff;
+	padding: 0px 20px 2px 2px;
+	background: url(images/close.gif) top right no-repeat;
+}
+
+.seeAll {
+	font-weight: bold;
+	text-align: right;
+}
+.seeAll a {
+	margin: 0px 10px;
+	color: #387983;
+}
+
+.disclaimer {
+	font-size: 10px;
+	font-style: italic;
+	color: #626262;
+	padding: 0px 0px 0px 20px;
+	background: url(images/icon_alert.gif) top left no-repeat;
+	margin-top: 5px;
+}
+
+.disclaimer.author2, .disclaimer.author10 {
+	display: none;
+}
