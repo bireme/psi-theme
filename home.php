@@ -51,7 +51,7 @@
 			<?php wp_reset_query();?>
 		</div><!--/posts-->
 		<div class="destaques_secundarios">
-			<?php query_posts( 'post_type=any&meta_key=highlight_home&meta_value=1' ); ?>
+			<?php query_posts( 'post_type=any&meta_key=highlight_home&meta_value=1&posts_per_page=15' ); ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="feature_2level">
 						<span class="category_name"><?php the_category(', '); ?></span><br>
